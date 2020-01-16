@@ -1,0 +1,39 @@
+main ul li.dev-single{
+    background-color: #fff;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+main ul li.dev-single header{
+    display: flex;
+    align-items: center;
+}
+
+main ul li.dev-single header .user-photo{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #7d40e7;
+    margin-right: 10px;
+}
+
+li.dev-single span{
+    display: block;
+}
+
+li.dev-single p{
+    color: #666;
+    padding: 20px 0;
+}
+
+li.dev-single a{
+    transition: .25s;
+    color: #8e4dff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+li.dev-single a:hover{
+    color: #5a2ea6;
+}

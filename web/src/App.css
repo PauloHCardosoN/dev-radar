@@ -1,0 +1,21 @@
+#app{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 960px){
+    #app{
+        flex-direction: column;
+        padding: 20px 30px;
+    }
+    #app > *{
+        margin-top: 30px; 
+    }
+    aside{
+        width: 100%;
+        max-width: none !important;
+    }
+}
