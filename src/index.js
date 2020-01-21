@@ -1,10 +1,15 @@
 const express = require('express')
 const cors = require('cors');
+const http = require('http');
 const mongoose = require('mongoose')
 const routes = require('./routes')
+const { setupWebsoket } = require('./websocket')
 
 
-const app = express()
+const app = express();
+const server = http.Server(app);
+
+setupWebsoket(server);
 
 app.use(cors())
 app.use(express.json());
@@ -17,6 +22,5 @@ mongoose.connect('mongodb+srv://paulocardoso:donthackmeplease@cluster0-3xdns.mon
     useUnifiedTopology: true
 })
 
-//console.log(tech)
 
-app.listen(5000,()=>{})
+server.listen(5000,()=>{})

@@ -1,8 +1,9 @@
+//Importando modulos
 const mongoose = require('mongoose')
 const PointSchema = require('../utils/PointSchema')
 
 
-
+//Definindo variavel|constante para receber dados dos devs
 const DevSchema = new mongoose.Schema({
     name: String,
     github_username: String,
@@ -15,4 +16,6 @@ const DevSchema = new mongoose.Schema({
     }
 });
 
+
+//Exportando variavel
 module.exports = mongoose.model('Dev', DevSchema)

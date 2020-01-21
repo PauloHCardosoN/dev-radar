@@ -2,6 +2,8 @@ const Dev = require('../models/Dev')
 const parseStringAsArray = require('../utils/parseStringasArray')
 
 module.exports = {
+    
+    //Filtra devs com informações
     async index(req, res){
 
         const { latitude, longitude, techs } = req.query;

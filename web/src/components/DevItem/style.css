@@ -1,8 +1,25 @@
+main{
+    flex: 1;
+}
+
+main ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
 main ul li.dev-single{
+    position: relative;
     background-color: #fff;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 3px;
+}
+
+main ul li.dev-single:hover{
+    border: 1px solid #5a2ea6;
+    box-sizing: content-box;
+    padding: 19px;
 }
 
 main ul li.dev-single header{
@@ -25,15 +42,30 @@ li.dev-single span{
 li.dev-single p{
     color: #666;
     padding: 20px 0;
+    margin-bottom: 30px;
 }
 
 li.dev-single a{
-    transition: .25s;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transition: color(.25s);
     color: #8e4dff;
     font-size: 14px;
     text-decoration: none;
 }
 
+li.dev-single:hover a{
+    bottom: 19px;
+    left: 19px;
+}
+
 li.dev-single a:hover{
     color: #5a2ea6;
+}
+
+@media (max-width: 570px){
+    main ul{
+        grid-template-columns: 1fr;
+    }
 }

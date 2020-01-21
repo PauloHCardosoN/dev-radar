@@ -1,44 +1,44 @@
+//Importando modulos
 import React, { useState, useEffect } from 'react';
 
+//Importando estilização
+import './style.css'
 
 
+//Criando componente do Formulário
 function DevForm({ onSubmit }){
 
+  //Criando variaveis|constantes para pegar os valores da API do Github
+  /*
+    devs: Lista de Desenvolvedores no "Banco de Dados" (Definida pelo seu "Banco de Dados")
+    github_username: Nickname ou Nome de Usuário no Github (Definida pelo Github API)
+    techs: Tecnologias que o usúario trabalha (Definida Manualmente)
+    latitude & longitude: Cordenadas cadastrada pelo dev (Definida Automaticamente na página de Login)
+  */
   const [ devs, setDevs ] = useState([])
   const [ github_username, setGithubUsername] = useState('')
   const [ techs, setTechs ] = useState('')
   const [latitude, setLatitude] = useState('')
   const [longitude, setLongitude] = useState('')
 
-  useEffect(()=>{
-      navigator.geolocation.getCurrentPosition(
-        (position)=>{
-          const { latitude, longitude } = position.coords;
   
-          setLatitude(latitude)
-          setLongitude(longitude)
-        },
-        (err)=>{
-          alert('Não foi possivel obter sua localização atual. Por favor, tente novamente mais tarde ou confira se seu GPS está habilitado')
-        },
-        {
-          timeout: 30000,
-        }
-      );
-  }, [])
-
+  //Uma função de conclusão do formulário
   async function handleSubmit(e){
-      e.preventDefault();
+    
+    //Impede o formulário de te enviar à outro link
+    e.preventDefault();
 
-      await onSubmit({
-        github_username,
-        techs,
-        latitude,
-        longitude,
-      });
+    //Define essas variaveis de acordo com o valor do Formulário
+    await onSubmit({
+      github_username,
+      techs,
+      latitude,
+      longitude,
+    });
 
-      setGithubUsername('');
-      setTechs('');
+    //Define um valor inicial para o github_username & techs
+    setGithubUsername('');
+    setTechs('');
   }
 
   return (
@@ -66,7 +66,7 @@ function DevForm({ onSubmit }){
             type="number" 
             name="latitude" 
             required value={latitude}
-            onChange={e => setLatitude(e.target.value)}
+            onChange={e => setLatitude(e.target.value)} 
             />
             </div>
 
@@ -79,7 +79,7 @@ function DevForm({ onSubmit }){
             name="longitude"  
             required 
             value={longitude}
-            onChange={e => setLongitude(e.target.value)}
+            onChange={e => setLongitude(e.target.value)} 
             />
 
             </div>
@@ -92,4 +92,5 @@ function DevForm({ onSubmit }){
   )
 }
 
+//Exportando o componente
 export default DevForm;

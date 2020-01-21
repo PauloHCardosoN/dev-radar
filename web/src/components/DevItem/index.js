@@ -1,7 +1,10 @@
+//Importando o modulo
 import React from 'react';
 
-import './style.css'
+//Importando estilização
+import './style.css';
 
+//Criando componente
 function DevItem({ dev }){
 
     return (
@@ -26,4 +29,7 @@ function DevItem({ dev }){
     )
 }
 
+
+
+//Exportando componente
 export default DevItem;
