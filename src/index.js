@@ -17,7 +17,7 @@ app.use(routes);
 
 
 
-mongoose.connect('mongodb+srv://paulocardoso:donthackmeplease@cluster0-3xdns.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://<user>:<password>@cluster0-3xdns.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
