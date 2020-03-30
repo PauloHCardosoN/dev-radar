@@ -1,5 +1,5 @@
 ## Dev Radar
-Um projeto prático feito pela Rocketseat, na Semana Omnistack v11.
+Um projeto prático feito pela Rocketseat, na Semana Omnistack v10.
 
 A aplicação propõe o rastreamento de desenvolvedores que estiverem cadastrados nele.
 
