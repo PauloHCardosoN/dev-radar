@@ -1,5 +1,15 @@
+## Tecnologias Utilizadas
+    NodeJS
+    React
+    React Native
+    Expo
+    Express
+    Socket.io
+    Axios
+    Mongoose
+
 ## Dev Radar
-Um projeto prático feito pela Rocketseat, na Semana Omnistack v10.
+Um projeto prático feito pela Rocketseat, na Semana Omnistack v11.
 
 A aplicação propõe o rastreamento de desenvolvedores que estiverem cadastrados nele.
 
